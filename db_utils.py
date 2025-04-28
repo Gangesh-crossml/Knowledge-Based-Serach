@@ -9,8 +9,8 @@ print("Qdrant_api_key",st.secrets["QDRANT_API_KEY"])
 print("grok_api", st.secrets['GROQ_API_KEY'])
 
 qdrant = QdrantClient(
-    qdrant_url = st.secrets["QDRANT_URL"],
-    qdrant_api_key = st.secrets["QDRANT_API_KEY"]
+    url = st.secrets["QDRANT_URL"],
+    api_key = st.secrets["QDRANT_API_KEY"]
 )
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
