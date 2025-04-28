@@ -1,11 +1,12 @@
 import os
+import streamlit as st
 from qdrant_client import QdrantClient
 from qdrant_client.models import VectorParams, Distance
 from sentence_transformers import SentenceTransformer
 
 qdrant = QdrantClient(
-    url = os.environ.get('QDRANT_URL'),
-    api_key = os.environ.get('QDRANT_API_KEY')
+    qdrant_url = st.secrets["QDRANT_URL"],
+    qdrant_api_key = st.secrets["QDRANT_API_KEY"]
 )
 
 model = SentenceTransformer('all-MiniLM-L6-v2')

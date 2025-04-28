@@ -1,8 +1,9 @@
 import requests
 import os
+import streamlit as st
 
-GROQ_API_KEY = os.environ.get('GROQ_API_KEY')
-GROQ_API_URL = os.environ.get('GROQ_API_URL')
+GROQ_API_KEY = st.secrets['GROQ_API_KEY']
+GROQ_API_URL = st.secrets['GROQ_API_URL']
 
 def ask_llama(context, query):
     prompt = f"Use the following context to answer the question:\n\n{context}\n\nQuestion: {query}"
