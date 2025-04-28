@@ -4,6 +4,10 @@ from qdrant_client import QdrantClient
 from qdrant_client.models import VectorParams, Distance
 from sentence_transformers import SentenceTransformer
 
+print("Qdrant_url", st.secrets["QDRANT_URL"])
+print("Qdrant_api_key",st.secrets["QDRANT_API_KEY"])
+print("grok_api", st.secrets['GROQ_API_KEY'])
+
 qdrant = QdrantClient(
     qdrant_url = st.secrets["QDRANT_URL"],
     qdrant_api_key = st.secrets["QDRANT_API_KEY"]
