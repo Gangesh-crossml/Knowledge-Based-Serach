@@ -7,7 +7,7 @@ qdrant = QdrantClient(
     url = os.environ.get('QDRANT_URL'),
     api_key = os.environ.get('QDRANT_API_KEY')
 )
-breakpoint()
+
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 def setup_collection(collection_name="docs"):
